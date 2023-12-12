@@ -24,10 +24,10 @@ Esta API foi desenvolvida para gerenciar informações sobre recados. Ela oferec
 Além de criar e fazer o login de usuários.
 
 
-#### Retorna uma lista de todos os usuários e seus recados cadastrados.
+#### Retorna uma lista de todos os usuários cadastrados.
 
 ```http
-  GET /usuario
+  GET /usuarios
 ```
 
 
@@ -39,9 +39,17 @@ Além de criar e fazer o login de usuários.
 
 | Parâmetro   | Tipo       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
-| `id` | `String` | **Obrigatório**. id do usuario para filtragem
+| `AccessToken` | `String` | **Obrigatório**. token do usuario para filtragem
 
+#### Retorna todos os recados do usuario logado.
 
+```http
+  GET /recados/listagem/
+```
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `AccessToken` | `String` | **Obrigatório**. token do usuario para filtragem
 
 
 #### Criar um recado
@@ -57,9 +65,7 @@ Além de criar e fazer o login de usuários.
 | `Descrição `      | `string`           | **Obrigatório**. descrição do recado |
 
 
-
-
-#### Atualiza recado existente com base no ID do usuario e ID do recado fornecido na URL.
+#### Atualiza recado existente com base no Access Token e ID do recado fornecido na URL.
 
 ```http
   PUT /usuario/recados/:idRecado
@@ -69,7 +75,6 @@ Além de criar e fazer o login de usuários.
 | :---------- | :----------------- | :------------------------------------------ |
 | `Access token`        | `string`           | **Obrigatório**. token do usuario |
 | `id`        | `string`           | **Obrigatório**. id do recado |
-| `Recados`   | `Array de objetos` | **Obrigatório**. lista de com recados |
 | `Titulo`       | `String`           | **Obrigatório**. titulo do recado |
 | `Descrição `      | `string`           | **Obrigatório**. descrição do recado |
 
@@ -94,7 +99,6 @@ Além de criar e fazer o login de usuários.
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `id`      | `String` | **Obrigatório**. id do usuario |
 | `Nome`      | `String` | **Obrigatório**. Nome do usuário |
 | `E-mail`      | `String` | **Obrigatório**. E-mail do usuário |
 | `Senha`      | `String` | **Obrigatório**. Senha do usuário |

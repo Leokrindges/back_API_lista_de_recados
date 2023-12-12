@@ -143,7 +143,7 @@ app.get('/usuarios', (request, response) => {
 })
 
 //BUSCA RECADOS DO USUARIO LOGADO
-app.get('/recados/', verifyJwt, (request, response) => {
+app.get('/recados', verifyJwt, (request, response) => {
     const accessToken = request.user
 
     const pegaUsuariosPeloIndice = usuarios.findIndex((usuario) => {
