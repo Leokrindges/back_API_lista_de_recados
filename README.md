@@ -23,6 +23,9 @@ Iniciar o projeto
 Esta API foi desenvolvida para gerenciar informações sobre recados. Ela oferece funcionalidades para criar, ler, atualizar e excluir recados.
 Além de criar e fazer o login de usuários.
 
+## URL base
+http://localhost:8080
+
 
 #### Retorna uma lista de todos os usuários cadastrados.
 
